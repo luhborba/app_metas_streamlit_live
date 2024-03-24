@@ -1,4 +1,5 @@
 import streamlit as st
+from src.database import conectar_banco
 
 
 def main():
@@ -23,6 +24,12 @@ def main():
         impressores_90dias = st.number_input("Nº de Impressores 90 dias", min_value=0, step=1)
         enviar = st.button('Enviar Dados')
 
+        if enviar:
+            try:
+                resposta = conectar_banco(visualizacao_youtube=visualizacao_youtube, inscricao_youtube=inscricao_youtube, visualizacao_youtube_28dias=visualizacao_youtube_28dias, visualizacao_youtube_48horas=visualizacao_youtube_48horas, seguidores_linkedin=seguidores_linkedin, impressoes_28dias=impressoes_28dias, impressores_90dias=impressores_90dias)
+            except Exception as e:
+                st.error(f"Erro ao enviar dados: {e}")
+    
 
 
 if __name__ == "__main__":
