@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "dpg-cnvmnp6ct0pc73dnmbmg-a.oregon-postgres.render.com",
+            "driver": "PostgreSQL",
+            "name": "Render",
+            "database": "streamlit_bh9z",
+            "username": "lborba",
+            "connectString": "postgres://lborba:D99CQ6cFAoZ5WdhmdrGIKBiF9q5fMrBl@dpg-cnvmnp6ct0pc73dnmbmg-a.oregon-postgres.render.com/streamlit_bh9z"
+        }
+    ]
+}
